@@ -1,0 +1,15 @@
+[ {
+  "name" : "testStuff",
+  "password" : "112233",
+  "age" : 21,
+  "position" : "testPosition",
+  "trained" : false,
+  "id" : 123
+}, {
+  "name" : "testStuff1",
+  "password" : "1122334",
+  "age" : 22,
+  "position" : "testPosition1",
+  "trained" : false,
+  "id" : 1234
+} ]
