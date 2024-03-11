@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5888500d-1391-4cb2-b7ba-9e0a0466af8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Teacher.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseJSON.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Stuff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/TeacherFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Main.java" afterDir="false" />
+    <list default="true" id="5888500d-1391-4cb2-b7ba-9e0a0466af8c" name="Changes" comment="demo of data">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Director.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Stuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Stuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/TeacherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/TeacherFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -117,12 +114,36 @@
       <updated>1710116927022</updated>
       <workItem from="1710116928144" duration="51000" />
       <workItem from="1710117066944" duration="79000" />
-      <workItem from="1710117728961" duration="18523000" />
+      <workItem from="1710117728961" duration="30371000" />
     </task>
+    <task id="LOCAL-00001" summary="demo of data">
+      <option name="closed" value="true" />
+      <created>1710183388781</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710183388781</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="demo of data" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo of data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

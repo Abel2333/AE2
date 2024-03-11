@@ -16,6 +16,23 @@ public abstract class Stuff {
         this.age = age;
         this.position = position;
     }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", ID=" + ID +
+                ", age=" + age +
+                ", position='" + position + "', ";
+    }
+
+    public Stuff() {
+        this.name = null;
+        this.ID = 0;
+        this.password = null;
+        this.age = 0;
+        this.position = null;
+    }
+
     public String getName() {
         return name;
     }
@@ -32,7 +49,7 @@ public abstract class Stuff {
         this.ID = ID;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return this.password;
     }
 
@@ -56,12 +73,14 @@ public abstract class Stuff {
         this.position = position;
     }
 
-    public boolean login(String pwd){
+    public boolean login(String pwd) {
         return Objects.equals(pwd, this.password);
     }
 }
 
 abstract class StuffFactory {
     public abstract Stuff createStuff(String name, int ID, String pwd, int age, String position);
+
+    public abstract Stuff createStuff();
 }
 
