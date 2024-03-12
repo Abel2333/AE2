@@ -19,4 +19,25 @@ public enum DataType {
     public String getClassName() {
         return className;
     }
+
+    private static String removeFirstWordAndSpace(String input) {
+        // Find the end position of first word.
+        int firstWordEndIndex = input.indexOf(' ');
+
+        // If it finds the space, remove all byte before space (include space).
+        if (firstWordEndIndex != -1) {
+            return input.substring(firstWordEndIndex + 1).trim();
+        }
+
+        // If no space is found, it means that there is
+        // only one word or no word in the string
+        return "";
+    }
+
+    public static String getClassName(Object object){
+        // className here looks like "class org.xx.xx"
+        String className = String.valueOf(object.getClass());
+        // Get "org.xx.xx"
+        return DataType.removeFirstWordAndSpace(className);
+    }
 }

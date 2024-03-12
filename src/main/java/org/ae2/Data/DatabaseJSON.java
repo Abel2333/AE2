@@ -20,18 +20,25 @@ public class DatabaseJSON {
      * */
 
     private DataType dataType;
-    private final ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
 
     public void setDataType(DataType dataType) {
         this.dataType = dataType;
     }
 
-    public DatabaseJSON(DataType dataType) {
-        this.dataType = dataType;
+    private void setObjectMapper(){
         this.objectMapper = new ObjectMapper();
-
         // Format json string.
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+    }
+
+    public DatabaseJSON(){
+        setObjectMapper();
+        this.dataType = null;
+    }
+    public DatabaseJSON(DataType dataType) {
+        this.dataType = dataType;
+        setObjectMapper();
     }
 
     //Overloading of writeData(Vector<Stuff>)
