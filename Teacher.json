@@ -1,15 +1,21 @@
 [ {
   "name" : "testStuff",
-  "password" : "112233",
-  "age" : 21,
-  "position" : "testPosition",
+  "password" : "2B78ECC0DF27A635FBE400CABABCD33CD44041B2F2708FC5FAC5DE4DADFEB112DA613EEA6EA0177BDE2D6524767750802981AD0FB74A72130F00B3ED093BF401",
+  "age" : 40,
+  "salt" : "1FbYtB7IpfnSIHHw8sg+CA==",
+  "lastLogged" : null,
+  "courses" : [ "Math", "English" ],
+  "invitations" : null,
   "trained" : false,
   "id" : 123
 }, {
   "name" : "testStuff1",
-  "password" : "1122334",
+  "password" : "E4179C684E4D071716F51FCAFF128712132038A3BEC372DD9ECE410B2585C690756FCD8434982318B9A679E4D70C354379787424D32EF9D0FC1B3DD240F32AC8",
   "age" : 22,
-  "position" : "testPosition1",
+  "salt" : "gKRkYHzEzCHGmZtbTzHZcQ==",
+  "lastLogged" : "13-03-2024 06:53:29",
+  "courses" : [ "History", "Math" ],
+  "invitations" : [ ],
   "trained" : false,
   "id" : 1234
 } ]

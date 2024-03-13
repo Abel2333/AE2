@@ -41,14 +41,8 @@ public class DatabaseJSON {
         setObjectMapper();
     }
 
-    //Overloading of writeData(Vector<Stuff>)
-    public void writeData(Stuff[] stuffs) throws JsonProcessingException {
-        Vector<Stuff> stuffVector = new Vector<>(java.util.Arrays.asList(stuffs));
-        writeData(stuffVector);
-    }
-
-    public void writeData(Vector<Stuff> stuffs) throws JsonProcessingException {
-        // Write all objects to file at once.
+    public void writeData(Vector<?> stuffs) throws JsonProcessingException {
+        // Write all stuffs to file at once.
         Path jsonPath = Path.of(this.dataType.getFileName());
         String tempString = objectMapper.writeValueAsString(stuffs);
         try {
@@ -58,7 +52,7 @@ public class DatabaseJSON {
         }
     }
 
-    public Vector<Stuff> readData() throws ClassNotFoundException {
+    public <T> Vector<T> readData() throws ClassNotFoundException {
         Path jsonPath = Path.of(dataType.getFileName());
         if (!Files.exists(jsonPath)) {
             return null;

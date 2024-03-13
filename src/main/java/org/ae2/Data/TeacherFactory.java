@@ -2,11 +2,11 @@ package org.ae2.Data;
 
 public class TeacherFactory extends StuffFactory {
     @Override
-    public Stuff createStuff(String name, int ID, String pwd, int age, String position) {
-        return new Teacher(name, ID, pwd, age, position);
+    public Teacher createStuff(String name, int ID, String pwd, int age) {
+        return new Teacher(name, ID, pwd, age);
     }
     @Override
-    public Stuff createStuff(){
+    public Teacher createStuff(){
         return new Teacher();
     }
 }

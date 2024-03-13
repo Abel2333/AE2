@@ -1,15 +1,15 @@
 [ {
-  "name" : "textDirector",
-  "password" : "11223344",
-  "age" : 28,
-  "position" : "testPosition",
-  "trained" : false,
-  "id" : 2231
-}, {
   "name" : "testDirector2",
-  "password" : "22334567",
+  "password" : "3BB88F37607F42C5CD1344664DFB19A1446FC9F1795AA452B6597802E9F6BC94AC01F6B22E110FFD71E2A67B5EA45BF20716F037B6726D5419465763A311530D",
   "age" : 27,
-  "position" : "testPosition2",
-  "trained" : false,
+  "salt" : "JNGYPt4c2FfIV9sgEqkf+w==",
+  "lastLogged" : null,
   "id" : 43521
+}, {
+  "name" : "testDirector",
+  "password" : "AE5D512AB8DF5F62D0AA454263AFFCC8EA3CAF1CF4C840A000EAA1FB680843AE6E0EA5588F3FE930B3F455504AE77CB6D8A07A2A280AC6F44136F6F52D8B7442",
+  "age" : 28,
+  "salt" : "yE3dJpC3s4enC0dyTLQqiQ==",
+  "lastLogged" : "13-03-2024 04:55:19",
+  "id" : 2231
 } ]

@@ -1,0 +1,17 @@
+[ {
+  "ageSet" : [ ],
+  "course" : "Math",
+  "maxAge" : 22,
+  "minAge" : 22,
+  "creatorID" : 2231,
+  "involvedTeachers" : null,
+  "id" : "70fd84c1-edb4-4e18-a25d-7e3bc635603a"
+}, {
+  "ageSet" : [ 34, 21, 22, 40 ],
+  "course" : "History",
+  "maxAge" : -1,
+  "minAge" : -1,
+  "creatorID" : 2231,
+  "involvedTeachers" : [ 1234 ],
+  "id" : "e000e71b-eca3-45de-86d9-a4d53aaa5a90"
+} ]
