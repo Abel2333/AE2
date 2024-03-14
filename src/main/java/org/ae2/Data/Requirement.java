@@ -1,8 +1,9 @@
 package org.ae2.Data;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Requirement {
+public class Requirement implements Serializable {
     private HashSet<Integer> ageSet;
     private String course;
     private int maxAge;

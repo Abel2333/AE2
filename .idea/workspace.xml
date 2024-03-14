@@ -4,29 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5888500d-1391-4cb2-b7ba-9e0a0466af8c" name="Changes" comment="add: add, delete, get operations.">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Administrator.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Requirement.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Administrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/AdministratorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DirectorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/GlobalData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Requirement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Utils.java" afterDir="false" />
+    <list default="true" id="5888500d-1391-4cb2-b7ba-9e0a0466af8c" name="Changes" comment="Preliminary completion.">
+      <change afterPath="$PROJECT_DIR$/Administrator.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Director.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Requirement.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Teacher.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseSER.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Director.json" beforeDir="false" afterPath="$PROJECT_DIR$/Director.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teacher.json" beforeDir="false" afterPath="$PROJECT_DIR$/Teacher.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Administrator.json" beforeDir="false" afterPath="$PROJECT_DIR$/Administrator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DataType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DataType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Director.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/GlobalStuff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/GlobalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/GlobalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Requirement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Stuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Stuff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/TeacherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/TeacherFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +66,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.DatabaseJSON.executor": "Run",
     "Application.Main.executor": "Run",
+    "Maven.AE2 [compile].executor": "Run",
     "Maven.AE2 [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -98,8 +90,8 @@
   }
 }]]></component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="DatabaseJSON" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ae2.Data.DatabaseJSON" />
+    <configuration name="DatabaseSER" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ae2.Data.DatabaseSER" />
       <module name="AE2" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +119,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.DatabaseJSON" />
+        <item itemvalue="Application.DatabaseSER" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +142,8 @@
       <workItem from="1710117066944" duration="79000" />
       <workItem from="1710117728961" duration="37417000" />
       <workItem from="1710266858272" duration="20207000" />
-      <workItem from="1710290735216" duration="22088000" />
+      <workItem from="1710290735216" duration="22202000" />
+      <workItem from="1710355828852" duration="9723000" />
     </task>
     <task id="LOCAL-00001" summary="demo of data">
       <option name="closed" value="true" />
@@ -176,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710207836234</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Preliminary completion.">
+      <option name="closed" value="true" />
+      <created>1710312915143</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710312915143</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,16 +199,16 @@
     <MESSAGE value="demo of data" />
     <MESSAGE value="add read from file" />
     <MESSAGE value="add: add, delete, get operations." />
-    <option name="LAST_COMMIT_MESSAGE" value="add: add, delete, get operations." />
+    <MESSAGE value="Preliminary completion." />
+    <option name="LAST_COMMIT_MESSAGE" value="Preliminary completion." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/ae2/Controller.java</url>
-          <line>174</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.NotSerializableException" package="java.io" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

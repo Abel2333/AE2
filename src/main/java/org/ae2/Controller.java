@@ -44,6 +44,7 @@ public class Controller {
             }
 
             Stuff currentStuff = GlobalData.getStuff(buffer.toString());
+            buffer.setLength(0);
             if (currentStuff == null) {
                 System.out.println("There are no stuff " + buffer);
                 continue;
@@ -148,10 +149,11 @@ public class Controller {
         }
     }
 
-    private void administratorOperation(Administrator administrator, StringBuffer buffer, Scanner scanner) {
+    private void administratorOperation(Administrator administrator, StringBuffer buffer, Scanner scanner) throws ClassNotFoundException {
         boolean logout = false;
         while (!logout) {
             System.out.println("\n");
+            System.out.println("Here are " + GlobalData.getInstance().getStuffNumbers() + " stuffs and " + GlobalData.getInstance().getRequirementNumbers() + " requirements.");
             System.out.println("You want Display personal information(1), View requirements(2) or Logout(3)?: ");
             int operation = Integer.parseInt(scanner.nextLine());
             switch (operation) {

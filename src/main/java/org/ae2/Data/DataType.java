@@ -1,10 +1,10 @@
 package org.ae2.Data;
 
 public enum DataType {
-    TEACHER("Teacher.json", "org.ae2.Data.Teacher", true),
-    DIRECTOR("Director.json", "org.ae2.Data.Director", true),
-    ADMINISTRATOR("Administrator.json", "org.ae2.Data.Administrator", true),
-    REQUIREMENT("Requirement.json", "org.ae2.Data.Requirement", false);
+    TEACHER("Teacher.ser", "org.ae2.Data.Teacher", true),
+    DIRECTOR("Director.ser", "org.ae2.Data.Director", true),
+    ADMINISTRATOR("Administrator.ser", "org.ae2.Data.Administrator", true),
+    REQUIREMENT("Requirement.ser", "org.ae2.Data.Requirement", false);
     private final String fileName;
     private final String className;
     private final boolean isStuff;

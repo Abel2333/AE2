@@ -9,30 +9,52 @@ import java.util.Vector;
 public class GlobalData {
     private static GlobalData globalData;
 
+    private int stuffNumbers;
+    private int requirementNumbers;
+
     private static Map<DataType, Vector<Stuff>> allStuffs;
     private static Vector<Requirement> allRequirements;
 
     private GlobalData() throws ClassNotFoundException {
-        DatabaseJSON databaseJSON = new DatabaseJSON();
+        DatabaseSER databaseSER = new DatabaseSER();
+        this.stuffNumbers = 0;
+        this.requirementNumbers = 0;
 
         allStuffs = new LinkedHashMap<>();
 
         for (DataType dataType : DataType.values()) {
-            databaseJSON.setDataType(dataType);
+            databaseSER.setDataType(dataType);
             if (dataType.isStuff()) {
-                Vector<Stuff> tempStuff = databaseJSON.readData();
+                Vector<Stuff> tempStuff = databaseSER.readData();
                 if (tempStuff == null) {
                     tempStuff = new Vector<>();
                 }
+                this.stuffNumbers += tempStuff.size();
                 allStuffs.put(dataType, tempStuff);
             } else {
-                allRequirements = databaseJSON.readData();
+                allRequirements = databaseSER.readData();
                 if (allRequirements == null) {
                     allRequirements = new Vector<>();
                 }
+                this.requirementNumbers = allRequirements.size();
             }
         }
 
+    }
+
+    public int getStuffNumbers() {
+        return stuffNumbers;
+    }
+
+    public int getRequirementNumbers() {
+        return requirementNumbers;
+    }
+
+    public static GlobalData getInstance() throws ClassNotFoundException {
+        if (globalData == null) {
+            initialize();
+        }
+        return globalData;
     }
 
     public static synchronized void initialize() throws ClassNotFoundException {
@@ -140,12 +162,12 @@ public class GlobalData {
             return;
         }
 
-        DatabaseJSON databaseJSON = new DatabaseJSON();
+        DatabaseSER databaseSER = new DatabaseSER();
         for (Map.Entry<DataType, Vector<Stuff>> entry : allStuffs.entrySet()) {
-            databaseJSON.setDataType(entry.getKey());
-            databaseJSON.writeData(entry.getValue());
+            databaseSER.setDataType(entry.getKey());
+            databaseSER.writeData(entry.getValue());
         }
-        databaseJSON.setDataType(DataType.REQUIREMENT);
-        databaseJSON.writeData(allRequirements);
+        databaseSER.setDataType(DataType.REQUIREMENT);
+        databaseSER.writeData(allRequirements);
     }
 }

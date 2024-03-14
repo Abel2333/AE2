@@ -1,43 +1,31 @@
 package org.ae2.Data;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import org.ae2.Utils;
 
-import java.nio.file.FileSystemNotFoundException;
-import java.time.LocalDate;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serial;
+import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
-public abstract class Stuff {
+public abstract class Stuff implements Serializable {
     private String name;
     private int ID;
     private String password;
     private int age;
-    @JsonIgnore
-    private String position;
+    private static String position;
     private String salt;
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss", timezone = "BST")
     private LocalDateTime lastLogged;
-    @JsonIgnore
-    private final DateTimeFormatter formatter;
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
     public void display() {
         System.out.println("Name: " + this.name);
         System.out.println("ID: " + this.ID);
         System.out.println("Age: " + this.age);
-        System.out.println("Position: " + this.position);
-        if (this.lastLogged!=null) {
-            System.out.println("Last logged: " + this.lastLogged.format(this.formatter));
+        System.out.println("Position: " + position);
+        if (this.lastLogged != null) {
+            System.out.println("Last logged: " + this.lastLogged.format(formatter));
         }
     }
 
@@ -49,7 +37,6 @@ public abstract class Stuff {
         this.setPosition();
         this.salt = null;
         this.lastLogged = null;
-        this.formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
     }
 
     public Stuff(String name, int ID, String password, int age) {
@@ -60,7 +47,14 @@ public abstract class Stuff {
         this.salt = null;
         this.setPosition();
         this.lastLogged = null;
-        this.formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    }
+
+    @Serial
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        // 默认反序列化
+        in.defaultReadObject();
+        // 在反序列化方法中手动设置静态变量的值
+        this.setPosition();
     }
 
     @Override
@@ -115,7 +109,7 @@ public abstract class Stuff {
     public void setPosition() {
         String fullName = String.valueOf(this.getClass());
         int lastIndex = fullName.lastIndexOf('.');
-        this.position = fullName.substring(lastIndex + 1);
+        position = fullName.substring(lastIndex + 1);
     }
 
     public String getSalt() {
@@ -134,15 +128,11 @@ public abstract class Stuff {
         this.lastLogged = lastLogged;
     }
 
-    public String acquireFormatLastLogged(){
-        if (this.lastLogged==null){
+    public String acquireFormatLastLogged() {
+        if (this.lastLogged == null) {
             this.lastLogged = LocalDateTime.now();
         }
-        return this.lastLogged.format(this.formatter);
-    }
-
-    public boolean login(char[] pwd) {
-        return this.login(new String(pwd));
+        return this.lastLogged.format(formatter);
     }
 
     public boolean login(String pwd) {
