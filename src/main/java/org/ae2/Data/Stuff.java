@@ -23,7 +23,7 @@ public abstract class Stuff implements Serializable {
         System.out.println("Name: " + this.name);
         System.out.println("ID: " + this.ID);
         System.out.println("Age: " + this.age);
-        System.out.println("Position: " + position);
+        System.out.println("Position: " + this.getPosition());
         if (this.lastLogged != null) {
             System.out.println("Last logged: " + this.lastLogged.format(formatter));
         }
@@ -47,14 +47,7 @@ public abstract class Stuff implements Serializable {
         this.salt = null;
         this.setPosition();
         this.lastLogged = null;
-    }
-
-    @Serial
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-        // 默认反序列化
-        in.defaultReadObject();
-        // 在反序列化方法中手动设置静态变量的值
-        this.setPosition();
+        this.encryptPassword();
     }
 
     @Override
@@ -103,7 +96,9 @@ public abstract class Stuff implements Serializable {
     }
 
     public String getPosition() {
-        return position;
+        String fullName = String.valueOf(this.getClass());
+        int lastIndex = fullName.lastIndexOf('.');
+        return fullName.substring(lastIndex + 1);
     }
 
     public void setPosition() {
@@ -139,11 +134,5 @@ public abstract class Stuff implements Serializable {
         String encryptedPwd = Utils.encrypt(pwd, this.salt, String.valueOf(this.ID));
         return encryptedPwd.equals(this.password);
     }
-}
-
-abstract class StuffFactory {
-    public abstract Stuff createStuff(String name, int ID, String pwd, int age);
-
-    public abstract Stuff createStuff();
 }
 

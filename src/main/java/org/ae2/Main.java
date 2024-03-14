@@ -1,10 +1,8 @@
 package org.ae2;
 
-import java.io.*;
-
 
 public class Main {
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException {
         Controller controller = new Controller();
         controller.Start();
     }

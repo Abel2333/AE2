@@ -1,6 +1,5 @@
 package org.ae2;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.ae2.Data.*;
 
 import java.io.IOException;
@@ -31,7 +30,7 @@ public class Controller {
         }
     }
 
-    public void Start() throws ClassNotFoundException, JsonProcessingException {
+    public void Start() throws ClassNotFoundException {
         GlobalData.initialize();
         Scanner scanner = new Scanner(System.in);
         StringBuffer buffer = new StringBuffer();
@@ -117,6 +116,7 @@ public class Controller {
                     break;
                 case 3:
                     logout = true;
+                    break;
             }
         }
     }
@@ -145,6 +145,7 @@ public class Controller {
                     break;
                 case 3:
                     logout = true;
+                    break;
             }
         }
     }
@@ -154,7 +155,7 @@ public class Controller {
         while (!logout) {
             System.out.println("\n");
             System.out.println("Here are " + GlobalData.getInstance().getStuffNumbers() + " stuffs and " + GlobalData.getInstance().getRequirementNumbers() + " requirements.");
-            System.out.println("You want Display personal information(1), View requirements(2) or Logout(3)?: ");
+            System.out.println("You want Display personal information(1), View requirements(2), Add stuff(3) or Logout(4)?: ");
             int operation = Integer.parseInt(scanner.nextLine());
             switch (operation) {
                 case 1:
@@ -196,7 +197,37 @@ public class Controller {
                     buffer.setLength(0);
                     break;
                 case 3:
+                    StuffFactory stuffFactory;
+                    Stuff newStuff;
+                    System.out.println("Type other number means back former step.");
+                    System.out.println("The type of stuff you want to add (Teacher(1), Director(2), Administrator(3)): ");
+                    int tempType = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Name: ");
+                    String name = scanner.nextLine();
+                    System.out.println("Age: ");
+                    int age = Integer.parseInt(scanner.nextLine());
+                    int ID;
+                    do {
+                        System.out.println("ID (must be unique): ");
+                        ID = Integer.parseInt(scanner.nextLine());
+                    } while (GlobalData.getStuff(ID) != null);
+                    System.out.println("Password: ");
+                    String password = scanner.nextLine();
+                    if (tempType == 1) {
+                        stuffFactory = new TeacherFactory();
+                    } else if (tempType == 2) {
+                        stuffFactory = new DirectorFactory();
+                    } else if (tempType == 3) {
+                        stuffFactory = new AdministratorFactory();
+                    } else {
+                        break;
+                    }
+                    newStuff = stuffFactory.createStuff(name, ID, password, age);
+                    GlobalData.addStuff(newStuff);
+                    break;
+                case 4:
                     logout = true;
+                    break;
             }
         }
     }

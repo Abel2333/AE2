@@ -1,7 +1,5 @@
 package org.ae2.Data;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Vector;
@@ -113,12 +111,14 @@ public class GlobalData {
                 }
             }
         }
+        globalData.stuffNumbers++;
     }
 
     public static void addRequirement(Requirement requirement) {
         if (!allRequirements.add(requirement)) {
             throw new UnsupportedOperationException("Could not add requirement " + requirement.getID());
         }
+        globalData.requirementNumbers++;
     }
 
     public static void deleteStuff(int ID) {
@@ -135,6 +135,7 @@ public class GlobalData {
                 stuffs.remove(stuff);
             }
         }
+        globalData.stuffNumbers--;
     }
 
     public static void deleteRequirement(String ID) {
@@ -145,6 +146,7 @@ public class GlobalData {
         }
 
         GlobalData.allRequirements.remove(requirement);
+        globalData.requirementNumbers--;
     }
 
     public static void changeStuff(int ID, Stuff stuff) {
@@ -157,7 +159,7 @@ public class GlobalData {
         GlobalData.addRequirement(requirement);
     }
 
-    public static synchronized void end() throws JsonProcessingException {
+    public static synchronized void end(){
         if (globalData == null) {
             return;
         }

@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5888500d-1391-4cb2-b7ba-9e0a0466af8c" name="Changes" comment="Preliminary completion.">
-      <change afterPath="$PROJECT_DIR$/Administrator.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Director.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Requirement.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Teacher.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseSER.java" afterDir="false" />
+    <list default="true" id="5888500d-1391-4cb2-b7ba-9e0a0466af8c" name="Changes" comment="Replace JSON files with SER files to store the data and Fixed some bugs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/StuffFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administrator.json" beforeDir="false" afterPath="$PROJECT_DIR$/Administrator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Administrator.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Administrator.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Director.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Director.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DataType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DataType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/DatabaseJSON.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/GlobalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/GlobalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Requirement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Stuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Data/Stuff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ae2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ae2/Main.java" afterDir="false" />
     </list>
@@ -143,7 +137,7 @@
       <workItem from="1710117728961" duration="37417000" />
       <workItem from="1710266858272" duration="20207000" />
       <workItem from="1710290735216" duration="22202000" />
-      <workItem from="1710355828852" duration="9723000" />
+      <workItem from="1710355828852" duration="13642000" />
     </task>
     <task id="LOCAL-00001" summary="demo of data">
       <option name="closed" value="true" />
@@ -177,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710312915143</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Replace JSON files with SER files to store the data and Fixed some bugs">
+      <option name="closed" value="true" />
+      <created>1710381950668</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710381950668</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +202,8 @@
     <MESSAGE value="add read from file" />
     <MESSAGE value="add: add, delete, get operations." />
     <MESSAGE value="Preliminary completion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Preliminary completion." />
+    <MESSAGE value="Replace JSON files with SER files to store the data and Fixed some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace JSON files with SER files to store the data and Fixed some bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -209,6 +212,11 @@
           <properties class="java.io.NotSerializableException" package="java.io" />
           <option name="timeStamp" value="9" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/ae2/Controller.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
